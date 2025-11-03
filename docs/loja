@@ -205,6 +205,78 @@ collection:
             send: true
             store: true
           rebuildPath: true
+      - url: localhost:8081/clientes/1
+        name: Select por ID
+        meta:
+          id: req_e431a25ce8f841a5a77e4512bfa5a3ec
+          created: 1762194690210
+          modified: 1762195158751
+          isPrivate: false
+          description: ""
+          sortKey: -1761586854450
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/cliente/2
+        name: Update
+        meta:
+          id: req_e08e273d664f427eb962e831ed6c5241
+          created: 1762195229903
+          modified: 1762195947202
+          isPrivate: false
+          description: ""
+          sortKey: -1761586854300
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome_cliente": "   Julia   ",
+            	"cpf_cliente": 11123455545	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/cliente/2
+        name: Delete
+        meta:
+          id: req_d32d8b2a469a4af594c190d41e8b3048
+          created: 1762196107577
+          modified: 1762196722884
+          isPrivate: false
+          description: ""
+          sortKey: -1761586854200
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
 cookieJar:
   name: Default Jar
   meta:
