@@ -22,6 +22,27 @@ const clienteModel = {
     return rows;
     },
 
+    selecionarPorID:async (pId_cliente) => {
+    const sql = 'SELECT * FROM clientes WHERE id_cliente = ?;';
+    const values = [pId_cliente];
+    const [rows] = await pool.query(sql, values);
+    return rows;
+    },
+
+     editarCliente: async (pId_cliente, pNome_cliente, pCpf_cliente) => {
+    const sql = 'UPDATE clientes SET nome_cliente=?, cpf_cliente=? WHERE id_cliente=?;';
+    const values = [pNome_cliente, pCpf_cliente, pId_cliente];
+    const [rows] = await pool.query(sql, values);
+    return rows;
+    },
+
+     deleteCliente: async (pId_cliente) => {
+        const sql = 'DELETE FROM clientes WHERE id_cliente = ?;';
+        const values = [pId_cliente];
+        const [rows] = await pool.query(sql, values);
+        return rows;
+    }
+
 }
 
 module.exports = {clienteModel};
