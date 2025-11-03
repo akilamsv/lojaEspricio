@@ -1,0 +1,220 @@
+type: collection.insomnia.rest/5.0
+name: lojaEspricio
+meta:
+  id: wrk_47addbbf2e764e99a19176a7f5bf46ad
+  created: 1760986886124
+  modified: 1760986886124
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_0f291f554ab64eefb4afabb2c22906c2
+      created: 1761564738856
+      modified: 1761564738856
+      sortKey: -1761564738856
+      description: ""
+    children:
+      - url: localhost:8081/produtos
+        name: Select todos
+        meta:
+          id: req_544cda5cb8104e58acc141bb45337660
+          created: 1760987162852
+          modified: 1761565010326
+          isPrivate: false
+          description: ""
+          sortKey: -1761564753346
+        method: GET
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao":"celular",
+            	"valor": 900000
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/1
+        name: Select por ID
+        meta:
+          id: req_613c3657337e4f63ada5d1364df0bd0e
+          created: 1761564957051
+          modified: 1761572721675
+          isPrivate: false
+          description: ""
+          sortKey: -1761564753246
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos
+        name: Insert
+        meta:
+          id: req_d513259baf5e466e9bdbe163f625aeb7
+          created: 1761564985200
+          modified: 1761583817417
+          isPrivate: false
+          description: ""
+          sortKey: -1761564753146
+        method: POST
+        body:
+          mimeType: application/json
+          text: |
+            {
+            	"descricao":"pasta",
+            	"valor": 15
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/1
+        name: Update
+        meta:
+          id: req_cccf0f124d2047e1a9e95cbbfb398a65
+          created: 1761565029975
+          modified: 1761570542926
+          isPrivate: false
+          description: ""
+          sortKey: -1761564753046
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"descricao": "   macarrao   ",
+            	"valor": 20	
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/produtos/1
+        name: Delete
+        meta:
+          id: req_f3f8c1a01b194226b53e5d0c39815df5
+          created: 1761565061691
+          modified: 1761582591626
+          isPrivate: false
+          description: ""
+          sortKey: -1761564752946
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Clientes
+    meta:
+      id: fld_e83d5c1461b8435eb0b24350a1369f67
+      created: 1761586845158
+      modified: 1761586845158
+      sortKey: -1761586845158
+      description: ""
+    children:
+      - url: localhost:8081/clientes
+        name: Select todos
+        meta:
+          id: req_a78e127e4daf46d2b649d69e1f8f3270
+          created: 1761586849086
+          modified: 1761586892689
+          isPrivate: false
+          description: ""
+          sortKey: -1761586854500
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8081/clientes
+        name: Insert
+        meta:
+          id: req_eef04a78abdd4feaa40870979ad8cfd3
+          created: 1761591292081
+          modified: 1762169238067
+          isPrivate: false
+          description: ""
+          sortKey: -1761586854400
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome_cliente":"Maria",
+            	"cpf_cliente": 11122233346
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.6.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_46c28ab9234f7f5b0533ecfe206efdcb73064116
+    created: 1760986886145
+    modified: 1760986886145
+environments:
+  name: Base Environment
+  meta:
+    id: env_46c28ab9234f7f5b0533ecfe206efdcb73064116
+    created: 1760986886133
+    modified: 1760986886133
+    isPrivate: false
