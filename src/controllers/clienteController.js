@@ -89,7 +89,7 @@ const clienteController = {
             const resultado = await clienteModel.editarCliente(idCliente, novoNome, novoCpf);
 
             if(resultado.changedRows === 0) {
-                throw new Error('Ocorreu um erro ao atualizar o produto');
+                throw new Error('Ocorreu um erro ao atualizar o cliente');
             }
 
             res.status(200).json({message: 'Registro atualizado com sucesso', data: resultado});
@@ -118,9 +118,9 @@ const clienteController = {
             } else {
             const resultado = await clienteModel.deleteCliente(id);
             if (resultado.affectedRows === 1) {
-                res.status(200).json({message: 'Produto excluído com sucesso', data: resultado});
+                res.status(200).json({message: 'Cliente excluído com sucesso', data: resultado});
             } else {
-                throw new Error('Não foi possível excluir o produto');
+                throw new Error('Não foi possível excluir o cliente');
                 
             }
             }
